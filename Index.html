@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project: Eternal Secret</title>
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;min-height:100vh;padding:20px;
+display:flex;align-items:center;justify-content:center;
+background:linear-gradient(135deg,#090014,#32105a,#7b145e);
+color:white;font-family:Arial,sans-serif;text-align:center
+}
+.card{
+max-width:420px;width:100%;padding:25px 20px;
+border:1px solid #dba6ff;border-radius:22px;
+background:#ffffff12;box-shadow:0 0 25px #8c35c8
+}
+h1{color:#ffd5f2}
+p{line-height:1.8}
+button{
+padding:14px 20px;border:0;border-radius:25px;
+background:#e83e8c;color:white;font-size:16px
+}
+input{
+padding:12px;width:85%;border-radius:10px;border:0
+}
+#secret{display:none}
+</style>
+</head>
+<body>
+<div class="card">
+<p>CLASSIFIED FILE • 001</p>
+<h1>PROJECT: ETERNAL SECRET 🔐</h1>
+<p>A special message is waiting to be discovered.</p>
+<h3>SECURITY CHECK</h3>
+<p>Whose birthday surprise is this?</p>
+<input id="answer" placeholder="Enter the secret name">
+<br><br>
+<button onclick="unlock()">Unlock the Secret 🔑</button>
+<p id="error"></p>
+<div id="secret">
+<hr>
+<h1>ACCESS GRANTED 🎉</h1>
+<h2>Happy Birthday, Gulnara! 🎂💜</h2>
+<p>Dear Gulnara ❤️</p>
+<p>Not every surprise needs to be loud. Some are created quietly, with care, just to bring a smile to one special person.</p>
+<p>May your dreams find their way to reality, may happiness find you in unexpected places, and may your life collect beautiful memories.</p>
+<p>And here is the little secret: someone took time to create this mystery simply to make your day a little more special.</p>
+<h3>SECRET UNLOCKED ✨</h3>
+<p>Stay happy, stay amazing, and never stop smiling. 💜</p>
+<p>From your best friend,</p>
+<h2>Abuzar ❤️</h2>
+</div>
+</div>
+<script>
+function unlock(){
+let name=document.getElementById("answer").value.trim().toLowerCase();
+if(name==="gulnara"){
+document.getElementById("secret").style.display="block";
+document.getElementById("error").textContent="";
+}else{
+document.getElementById("error").textContent="ACCESS DENIED! Hint: Think of the birthday girl. 🔍";
+}
+}
+</script>
+</body>
+</html>
